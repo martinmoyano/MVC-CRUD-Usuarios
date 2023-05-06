@@ -1,0 +1,52 @@
+﻿@*@model IEnumerable<MVC_CRUD_EF.Repository.Entities.Usuario>*@
+@model MVC_CRUD_EF.Models.UsuariosDto
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+                @*@Html.DisplayNameFor(model => model.Nombre)*@
+            </th>
+            <th>
+                Clave
+                @*@Html.DisplayNameFor(model => model.Clave)*@
+            </th>
+            <th>
+                Fecha
+                @*@Html.DisplayNameFor(model => model.Fecha)*@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Usuarios)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Clave)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha)
+                </td>
+                <td>
+                    <a asp-action="Edit" class="btn btn-primary" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" class="btn btn-info" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

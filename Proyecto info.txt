@@ -1,0 +1,8 @@
+Proyecto copia
+Proyecto MVC con Entity Framework, con capas Repository, Services y Controller, 
+con el CRUD funcionando completo.
+Se hace una copia, para agregar paginación, ordenamiento y búsqueda.
+
+6/3/2023: 
+Se termina de agregar paginación, ordenamiento y búsqueda, con aplicación 
+de patrones, inyección de dependencia y repository.
